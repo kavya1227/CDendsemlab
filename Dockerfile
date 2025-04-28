@@ -1,10 +1,10 @@
-# Use the official Nginx image
+# Use nginx as base image
 FROM nginx:latest
 
-# Remove the default nginx website
+# Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy your project files into nginx's default directory
+# Copy your local app files to nginx directory
 COPY . /usr/share/nginx/html/
 
 # Expose port 80
